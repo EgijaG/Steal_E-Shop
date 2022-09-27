@@ -1,16 +1,16 @@
 document.getElementById("myHeader").innerHTML = `
-    <div class="header">
-        <div class="header-items header-left">
-            <a href="/index.html"><img id="logo" src="Images/rat.jpg"></a>
-            <a class="nav-link" href="/profils.html">Mani pirkumi</a>
-            <a class="nav-link" href="/profils.html">Mans profils</a>
-            <a class="nav-link" href="/profils.html">Piedāvājums</a>
-        </div>
-        <div class="header-items header-right">
-            <a class="nav-link" href="login.html">Login</a>
-            <a class="nav-link" href="signup.html">Sign up</a>
-        </div>
+<div class="header">
+    <div class="header-items header-left">
+      <a href="/index.html" style="margin-bottom:5px"><img id="logo" src="./Images/logo.png"></a>
+      <a class="header-link nav">My Purchases</a>
+      <a class="header-link nav" href="profils.html">My profile</a>
+      <a class="header-link nav">Offers</a>
     </div>
+    <div class="header-items header-right">
+      <a class="header-link login" href="/login.html" type="button">Log in</a>
+      <a class="header-link signup" href="./signup" type="button">Sign up</a>
+    </div>
+  </div>
 `;
 document.getElementById("myFooter").innerHTML = `
 <div class="footer">
