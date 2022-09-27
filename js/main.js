@@ -63,7 +63,7 @@ document.getElementById("myFooter").innerHTML = `
     <p class="footer-item">About us</p>
 </div>
 `;
-function renderCards() {
+
   products.forEach((p) => {
     let div = document.createElement("div");
     div.id = "renderedCard";
@@ -76,5 +76,4 @@ function renderCards() {
     </div>`;
     document.getElementsByClassName(p.category)[0].appendChild(div);
   });
-}
-renderCards();
+
