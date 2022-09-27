@@ -105,6 +105,7 @@ a {
   display: inline-block;
   width: 25%;
   padding: 100px;
+  margin-top: 75px;
   border: 2px solid #bdf2e2;
   border-radius: 4px;
   box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
@@ -189,39 +190,9 @@ a {
   margin-bottom: 10px;
   width: 94%;
   border-bottom: solid #bdf2e2 1px;
+  color:#bdf2e2;
 }
 
-.card-container {
-  display: flex;
-  overflow: auto;
-  justify-content: space-around;
-  white-space: nowrap;
-}
-.card-box {
-  white-space: normal;
-  vertical-align: top;
-}
-.card {
-  margin: 5px;
-  margin-top: 10px;
-  padding-top: 3%;
-  display: flex;
-  justify-content: center;
-  background-color: aquamarine;
-}
-
-.card-image {
-  justify-content: center;
-  display: flex;
-  margin-bottom: 10%;
-}
-.card-image img {
-  max-width: 70%;
-}
-.card-text {
-  display: flex;
-  justify-content: center;
-}
 .price {
   display: flex;
   background-color: white;
