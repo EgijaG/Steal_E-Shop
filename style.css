@@ -89,15 +89,16 @@ li {
 }
 a {
   color: #42b983;
+  text-decoration: none;
+}
+a:hover{
+  color: #42b983;
 }
 .login {
   color: white;
   text-decoration: none;
 }
-.login:hover,
-.signup:hover {
-  color: #42b983;
-}
+
 .signup {
   padding: 5px 10px;
   border-radius: 4px;
@@ -105,12 +106,7 @@ a {
   color: #05442f;
   text-decoration: none;
 }
-.login-page {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-}
+
 .btnSubmit {
   width: 50%;
   margin-top: 20px;
@@ -237,6 +233,14 @@ a {
 .footer-item {
   margin: auto;
   min-height: 40px;
+ 
+  font-family: "Courier Prime", monospace;
+  font-size: 20px;
+  font-weight: bold;
+  color: white;
+}
+.footer-item:hover {
+  color: #42b983;
 }
 
 .profile-container {
