@@ -1,38 +1,42 @@
 [
-    {
-      "id": 0,
-      "name": "Nude",
-      "description": "Lorem ipsum dolor Lorem ipsum dolor sit amet",
-      "price": 23,
-      "category": "Music",
-      "reserved": false,
-      "author":"Brink"
-    },
-    {
-      "id": 1,
-      "name": "Jane",
-      "description": "Lorem ipsum dolor Lorem ipsum dolor sit amet",
-      "price": 97,
-      "category": "Video",
-      "reserved": false,
-      "author":"Brink"
-    },
-    {
-      "id": 2,
-      "name": "Jack",
-      "description": "Lorem ipsum dolor Lorem ipsum dolor sit amet",
-      "price": 2345,
-      "category": "Image",
-      "reserved": false,
-      "author":"Brink"
-    },
-    {
-      "id": 3,
-      "name": "Jill",
-      "description": "Lorem ipsum dolor Lorem ipsum dolor sit amet",
-      "price": 14,
-      "category": "Music",
-      "reserved": false,
-      "author":"Brink"
-    }
-  ]
+  {
+    "id": 0,
+    "name": "Nude",
+    "description": "Lorem ipsum dolor Lorem ipsum dolor sit amet",
+    "price": 23,
+    "category": "Music",
+    "reserved": false,
+    "author": "Brink",
+    "imgPath": "img/Screenshot.jpg"
+  },
+  {
+    "id": 1,
+    "name": "Jane",
+    "description": "Lorem ipsum dolor Lorem ipsum dolor sit amet",
+    "price": 97,
+    "category": "Video",
+    "reserved": false,
+    "author": "Brink",
+    "imgPath": "img/Screenshot.jpg"
+  },
+  {
+    "id": 2,
+    "name": "Jack",
+    "description": "Lorem ipsum dolor Lorem ipsum dolor sit amet",
+    "price": 2345,
+    "category": "Image",
+    "reserved": false,
+    "author": "Brink",
+    "imgPath": "img/Screenshot.jpg"
+  },
+  {
+    "id": 3,
+    "name": "Jill",
+    "description": "Lorem ipsum dolor Lorem ipsum dolor sit amet",
+    "price": 14,
+    "category": "Music",
+    "reserved": false,
+    "author": "Brink",
+    "imgPath": "img/Screenshot.jpg"
+  }
+]

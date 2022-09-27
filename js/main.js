@@ -1,10 +1,10 @@
 document.getElementById("myHeader").innerHTML = `
     <div class="header">
         <div class="header-items header-left">
-            <a href="/index.html"><img id="logo" src="Images/rat.jpg"></a>
-            <a class="nav-link" href="/profils.html">Mani pirkumi</a>
-            <a class="nav-link" href="/profils.html">Mans profils</a>
-            <a class="nav-link" href="/profils.html">Piedāvājums</a>
+            <a href="index.html"><img id="logo" src="img/rat.jpg"></a>
+            <a class="nav-link" href="profils.html">Mani pirkumi</a>
+            <a class="nav-link" href="profils.html">Mans profils</a>
+            <a class="nav-link" href="profils.html">Piedāvājums</a>
         </div>
         <div class="header-items header-right">
             <a class="nav-link" href="login.html">Login</a>

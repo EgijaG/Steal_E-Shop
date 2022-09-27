@@ -1,13 +1,30 @@
+@import url('https://fonts.googleapis.com/css2?family=Allerta&display=swap%27');
+@import url('https://fonts.googleapis.com/css2?family=Courier+Prime&display=swap%27');
+
 #logo {
   height: 40px;
 }
 
 body {
-  display: grid;
-  grid-template-rows: auto 1fr auto;
-  height: 100vh;
+  font-family: 'Allerta', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-align: center;
+  color: #2c3e50;
+  margin-top: 60px;
+  flex: 1;
+  padding-bottom: 40px;
+  position: relative;
+  justify-content: center;
+  align-items: center;
   margin: 0;
-  max-width: 100%;
+  text-align: center;
+  background-image: url('./assets/img/background.jpg');
+  background-size: cover;
+}
+.cards {
+  display: inline;
+  max-width: 25%;
 }
 .input {
   margin-top: 20px;
@@ -18,6 +35,25 @@ body {
   background-color: #bdf2e2;
   border-radius: 4px;
   box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+}
+h1,
+h2 {
+  font-family: 'Courier Prime', monospace;
+  font-weight: normal;
+}
+h3 {
+  font-family: 'Allerta', sans-serif;
+}
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+li {
+  display: inline-block;
+  margin: 0 10px;
+}
+a {
+  color: #42b983;
 }
 .login-btn {
   width: 50%;
