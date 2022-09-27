@@ -11,17 +11,16 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
-  color: #2c3e50;
+  color: #052219;
   margin-top: 60px;
-  padding-bottom: 40px;
   position: relative;
   display: grid;
-  grid-template-rows: auto 1fr auto;
+  grid-template-rows: auto 1fr auto; 
+  width: 100vw;
   height: 100vh;
   margin: 0;
-  max-width: 100%;
-  margin: 0;
   text-align: center;
+  background-image: url('./img/background.jpg');
   background-size: cover;
 }
 .buyButton {
@@ -155,6 +154,9 @@ a {
 
 .content {
   margin-top: 60px;
+  width: 100%;
+  display: block;
+  justify-content: center;
 }
 .menu{
   background-color: #ABCED2;
@@ -174,12 +176,13 @@ a {
 }
 
 .section-title {
+  text-align: left;
   margin-top: 20px;
-  margin-left: 20px;
+  margin-left: 35px;
   padding-bottom: 0;
   margin-bottom: 10px;
-  width: 90%;
-  border-bottom: solid black 1px;
+  width: 94%;
+  border-bottom: solid #bdf2e2 1px;
 }
 
 .card-container {
@@ -226,7 +229,7 @@ a {
 .footer {
   margin-top: auto;
   width: 100%;
-  display: flex;
+  display:flex;
   background-color: #2e2e2e;
   color: white;
   text-align: center;
@@ -237,8 +240,13 @@ a {
   min-height: 40px;
 }
 
+.profile-container {
+  width: 100%;
+}
 .user-info {
   display: flex;
+  justify-content: space-evenly;
+  align-items: center;
 }
 .checked {
   color: gold;
@@ -249,10 +257,11 @@ a {
   text-align: center;
 }
 .feedback-table th {
-  border-bottom: black solid 3px;
+  border-bottom: #bdf2e2 solid 3px;
 }
 .feedback-table td {
-  border-bottom: black solid 1px;
+  padding-top: 1%;
+  border-bottom: #bdf2e2 solid 1px;
 }
 .star-review {
   width: 100%;
