@@ -24,7 +24,7 @@ body {
   text-align: center;
   background-size: cover;
 }
-button {
+.buyButton {
   background-color: #0C888E;
   color: #000;
   padding: 10px;

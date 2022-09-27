@@ -64,16 +64,15 @@ document.getElementById("myFooter").innerHTML = `
 </div>
 `;
 
-  products.forEach((p) => {
-    let div = document.createElement("div");
-    div.id = "renderedCard";
-    div.innerHTML = `
+products.forEach((p) => {
+  let div = document.createElement("div");
+  div.id = "renderedCard";
+  div.innerHTML = `
     <div id="card">
     <img src="${p.imgPath}" alt="screenshot">
     <h3>${p.name}</h3>
     <p>${p.description}</p>
-    <button  >${p.price} $</button>
+    <button class="buyButton" >${p.price} $</button>
     </div>`;
-    document.getElementsByClassName(p.category)[0].appendChild(div);
-  });
-
+  document.getElementsByClassName(p.category)[0].appendChild(div);
+});
