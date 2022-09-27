@@ -7,8 +7,8 @@ document.getElementById("myHeader").innerHTML = `
             <a class="nav-link" href="/profils.html">Piedāvājums</a>
         </div>
         <div class="header-items header-right">
-            <a class="nav-link" href="/login.html">Login</a>
-            <a class="nav-link" href="/signup.html">Sign up</a>
+            <a class="nav-link" href="login.html">Login</a>
+            <a class="nav-link" href="signup.html">Sign up</a>
         </div>
     </div>
 `;
