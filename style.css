@@ -12,19 +12,38 @@ body {
   text-align: center;
   color: #2c3e50;
   margin-top: 60px;
-  flex: 1;
+
   padding-bottom: 40px;
   position: relative;
+  flex: 1;
   justify-content: center;
   align-items: center;
   margin: 0;
   text-align: center;
-  background-image: url('./assets/img/background.jpg');
+  background-image: url('./img/background.jpg');
   background-size: cover;
 }
 .cards {
   display: inline;
   max-width: 25%;
+}
+#renderedCard {
+  display: inline-block;
+  padding: 20px 5px;
+  background-color: #ABCED2;
+  border-radius: 4px;
+  max-width: 25%;
+  margin: 20px 10px;
+  box-shadow: rgba(46, 240, 195, 0.4) -5px 5px, rgba(46, 240, 195, 0.3) -10px 10px, rgba(46, 240, 204, 0.2) -15px 15px, rgba(46, 211, 240, 0.1) -20px 20px, rgba(46, 240, 230, 0.05) -25px 25px;
+}
+#card>img {
+  max-width: 80%;
+  border-radius: 4px;
+  margin-top: 5%;
+}
+p {
+  font-family: 'Courier Prime', monospace;
+  font-size: 20px;
 }
 .input {
   margin-top: 20px;
