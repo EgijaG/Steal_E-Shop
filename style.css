@@ -91,7 +91,7 @@ a {
   align-items: center;
   height: 100vh;
 }
-.login-btn {
+.btnSumbit {
   width: 50%;
   margin-top: 20px;
   border: none;

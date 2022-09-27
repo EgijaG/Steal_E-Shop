@@ -114,15 +114,21 @@ document.getElementById("myFooter").innerHTML = `
 </div>
 `;
 
-products.forEach((p) => {
-  let div = document.createElement("div");
-  div.id = "renderedCard";
-  div.innerHTML = `
+function check() {
+  console.log(document.getElementsByClassName("btnSubmit"));
+}
+
+function renderCards() {
+  products.forEach((p) => {
+    let div = document.createElement("div");
+    div.id = "renderedCard";
+    div.innerHTML = `
     <div id="card">
     <img src="${p.imgPath}" alt="screenshot">
     <h3>${p.name}</h3>
     <p>${p.description}</p>
-    <button class="buyButton" >${p.price} $</button>
+    <button type="button" class="buyButton" >${p.price} $</button>
     </div>`;
-  document.getElementsByClassName(p.category)[0].appendChild(div);
-});
+    document.getElementsByClassName(p.category)[0].appendChild(div);
+  });
+}
