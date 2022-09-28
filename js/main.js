@@ -35,10 +35,10 @@ document.getElementById("myFooter").innerHTML = `
 theUrl2 = "http://stealstoragehost.epizy.com/getAllRows.php";
 theUrl = "https://random-data-api.com/api/v2/users";
 
-function back() {
-  fetch(theUrl2, {
-    method: "GET",
-    mode: "no-cors",
+function back(){
+  fetch(theUrl,{
+    method : 'GET',
+    mode: 'no-cors',
     headers: {
       "Content-Type": "application/json",
     },
@@ -48,11 +48,36 @@ function back() {
   console.log(json);
 }
 
-async function test() {
-  const resp = await fetch(theUrl);
-  let object = await resp.json();
-  console.log(object);
+async function test(){
+  const resp = await fetch(theUrl2);
+  const object = await resp.json();
+  //console.log(object);
+  return object;
 }
+test();
+function test1() {
+  return fetch(theUrl2, {
+      method: 'GET',
+    })
+    .then(function(response) {
+      return response.json();
+    })
+    .then(function(data) {
+      var userid = JSON.parse(JSON.stringify(data));
+      //console.log(userid);
+      return userid;
+    })
+}
+var arr = [];
+test().then(value => arr.push(value));
+console.log(arr);
+console.log(products);
+/*
+var array = [];
+const obj = test();
+array.push(obj);
+console.log(array);
+*/
 
  function renderCategories() { 
   categories.forEach((c) => {
@@ -70,6 +95,7 @@ async function test() {
 }
 
 function renderCards() {
+<<<<<<< HEAD
   fetch("data/products.json")
     .then((resp) => resp.json())
     .then((prod) =>
@@ -77,10 +103,16 @@ function renderCards() {
         let div = document.createElement("div");
         div.id = "renderedCard";
         div.innerHTML = `
+=======
+  arr.forEach((p) => {
+    let div = document.createElement("div");
+    div.id = "renderedCard";
+    div.innerHTML = `
+>>>>>>> 6456fc4995d2e940945fda56a5db0d5f5dd159c6
     <div id="card">
-    <img src="${p.imgPath}" alt="screenshot">
-    <h3 class="card-title">${p.name}</h3>
-    <p>${p.description}</p>
+    <img src="${p.p_avatar}" alt="screenshot">
+    <h3 class="card-title">${p.username}</h3>
+    <p>${p.desc}</p>
     <p style="font-style:italic;">By ${p.author}</p>
     <button type="button" onclick="test()">Buy for: ${p.price} $</button>
     </div>`;

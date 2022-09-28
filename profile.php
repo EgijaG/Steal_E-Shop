@@ -13,6 +13,17 @@
 </head>
 
 <body>
+
+    <?php 
+       session_start();
+       if (!isset($_SESSION["username"])){
+          header("Location: login.php");
+       }
+       if (isset($_POST["logout"])){
+            session_unset();
+            header("Location:index.php");
+       }
+    ?>
     <div id="myHeader"></div>
 
     <div class="content" style="color:#bdf2e2;">
@@ -25,17 +36,25 @@
 
                 <div class="user-info-text">
                     <div class="username">
-                        <h4>Username</h4>
+                        <h4><?php echo $_SESSION["username"] ?></h4>
                     </div>
                     <div class="star-review">
-                        <i class="fa fa-star checked"></i>
-                        <i class="fa fa-star checked"></i>
-                        <i class="fa fa-star checked"></i>
-                        <i class="fa fa-star"></i>
-                        <i class="fa fa-star"></i>
+                        <?php 
+                            $stars = $_SESSION["rating"];
+                            for ($i = 0; $i < 5; $i++){
+                                if ($stars > 0) {
+                                    ?><i class="fa fa-star checked"></i><?php
+                                    $stars -= 1;
+                                } else {
+                                    ?><i class="fa fa-star"></i><?php
+                                }
+                            }
+                        ?>
                     </div>
                     <div class="last-seen">
-                        <p>Last seen on ....</p>
+                        <form method="post">
+                        <!--<p>Last seen on ....</p>*/ -->
+                        <button type="submit" name="logout" class="btnSubmit">Logout</button>
                     </div>
                 </div>
             </div>
