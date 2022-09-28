@@ -277,3 +277,22 @@ a:hover{
 .row {
   max-width: 100%;
 }
+
+.product-form {
+  display: inline-block;
+  width: 50%;
+  padding: 100px;
+}
+.product-form > label {
+  color: #bdf2e2;
+  display: flex;
+  margin: 10px;
+}
+
+.product-form > .input {
+  margin-top: 0;
+}
+.product-form > .radial {
+  display: flex;
+  justify-content: space-evenly;
+}
