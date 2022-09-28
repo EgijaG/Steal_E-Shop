@@ -14,17 +14,15 @@
     <div class="content">
         <div class="login-form">
             <h2>Welcome to the stealing party.. Let's get you signed up!</h2>
-            <input class="input" label="Username" id="username" placeholder="Username" type="text" required="required"/>
-            <input class="input" label="E-mail" id="email" placeholder="E-mail" type="email" required/>
+            <input class="input" label="Username" id="username" placeholder="Username" type="text" required="required" />
+            <input class="input" label="E-mail" id="email" placeholder="E-mail" type="email" required />
             <input class="input" label="Password" id="password" placeholder="Password" type="password" />
             <input class="input" label="Password" id="repeat-password" placeholder="Repeat password" type="password" />
             <input class="input" label="Address" id="address" placeholder="Address" type="text" required />
-            <input class="input" label="Phone Number" id="phone-number" placeholder="Phone Number" type="tel"
-                required />
+            <input class="input" label="Phone Number" id="phone-number" placeholder="Phone Number" type="tel" required />
             <input class="input" label="Country" id="country" placeholder="Country" type="text" required />
-            <input type="checkbox" id="reg-checkbox">Agree with terms and conditions</input>
-            <button class="btnSubmit">Log in</button>
-            <p style=" font-size: medium;">Already have an account? <a href="./login.html">Log in!</a></p>
+            <button class="btnSubmit" >Sign Up</button>
+            <p style=" font-size: medium;">Already have an account? <a href="./login.php">Log in!</a></p>
         </div>
     </div>
     <div id="myFooter"></div>

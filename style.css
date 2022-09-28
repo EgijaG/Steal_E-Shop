@@ -277,7 +277,6 @@ a:hover{
 .row {
   max-width: 100%;
 }
-<<<<<<< HEAD
 .about-us{
 display: inline-block;
 width: 75%;
@@ -299,7 +298,6 @@ height: 60%;
   color: #05442f;
   margin-bottom: 15%;
 }
-=======
 
 .product-form {
   display: inline-block;
@@ -319,4 +317,3 @@ height: 60%;
   display: flex;
   justify-content: space-evenly;
 }
->>>>>>> a89f323be9f87e2c0d3794f546501706ee54a254
