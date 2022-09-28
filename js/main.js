@@ -95,7 +95,6 @@ console.log(array);
 }
 
 function renderCards() {
-<<<<<<< HEAD
   fetch("data/products.json")
     .then((resp) => resp.json())
     .then((prod) =>
@@ -103,12 +102,6 @@ function renderCards() {
         let div = document.createElement("div");
         div.id = "renderedCard";
         div.innerHTML = `
-=======
-  arr.forEach((p) => {
-    let div = document.createElement("div");
-    div.id = "renderedCard";
-    div.innerHTML = `
->>>>>>> 6456fc4995d2e940945fda56a5db0d5f5dd159c6
     <div id="card">
     <img src="${p.p_avatar}" alt="screenshot">
     <h3 class="card-title">${p.username}</h3>
