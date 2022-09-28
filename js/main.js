@@ -131,7 +131,7 @@ theUrl2 = "http://stealstoragehost.epizy.com/getAllRows.php";
 theUrl = "https://random-data-api.com/api/v2/users"; 
 
 function back(){
-  fetch(theUrl2,{
+  fetch(theUrl,{
     method : 'GET',
     mode: 'no-cors',
     headers: {
@@ -144,20 +144,45 @@ function back(){
 }
 
 async function test(){
-  const resp = await fetch(theUrl);
+  const resp = await fetch(theUrl2);
   const object = await resp.json();
-  console.log(object);
+  //console.log(object);
+  return object;
 }
+test();
+function test1() {
+  return fetch(theUrl2, {
+      method: 'GET',
+    })
+    .then(function(response) {
+      return response.json();
+    })
+    .then(function(data) {
+      var userid = JSON.parse(JSON.stringify(data));
+      //console.log(userid);
+      return userid;
+    })
+}
+var arr = [];
+test().then(value => arr.push(value));
+console.log(arr);
+console.log(products);
+/*
+var array = [];
+const obj = test();
+array.push(obj);
+console.log(array);
+*/
 
 function renderCards() {
-  products.forEach((p) => {
+  arr.forEach((p) => {
     let div = document.createElement("div");
     div.id = "renderedCard";
     div.innerHTML = `
     <div id="card">
-    <img src="${p.imgPath}" alt="screenshot">
-    <h3 class="card-title">${p.name}</h3>
-    <p>${p.description}</p>
+    <img src="${p.p_avatar}" alt="screenshot">
+    <h3 class="card-title">${p.username}</h3>
+    <p>${p.desc}</p>
     <p style="font-style:italic;">By ${p.author}</p>
     <button type="button" onclick="test()">Buy for: ${p.price} $</button>
     </div>`;
