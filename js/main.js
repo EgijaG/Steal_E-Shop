@@ -127,6 +127,28 @@ function check() {
   console.log("Jess papi, you clicked me!");
 }
 
+theUrl2 = "http://stealstoragehost.epizy.com/getAllRows.php";
+theUrl = "https://random-data-api.com/api/v2/users"; 
+
+function back(){
+  fetch(theUrl,{
+    method : 'GET',
+    mode: 'no-cors',
+    headers: {
+    'Content-Type': 'application/json'
+  },
+  })
+  .then(res => res.json())
+  .then(json => JSON.parse());
+  console.log(json);
+}
+
+async function test(){
+  const resp = await fetch(theUrl);
+  const object = await resp.json();
+  console.log(object);
+}
+
 function renderCards() {
   products.forEach((p) => {
     let div = document.createElement("div");
@@ -137,7 +159,7 @@ function renderCards() {
     <h3 class="card-title">${p.name}</h3>
     <p>${p.description}</p>
     <p style="font-style:italic;">By ${p.author}</p>
-    <button type="button" class="buyButton" onclick="check()">Buy for: ${p.price} $</button>
+    <button type="button" onclick="test()">Buy for: ${p.price} $</button>
     </div>`;
     document.getElementsByClassName(p.category)[0].appendChild(div);
   });
