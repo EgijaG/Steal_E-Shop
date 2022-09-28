@@ -54,7 +54,7 @@ async function test() {
   //console.log(object);
   return object;
 }
-test();
+// test();
 function test1() {
   return fetch(theUrl2, {
     method: "GET",
@@ -68,9 +68,9 @@ function test1() {
       return userid;
     });
 }
-var arr = [];
-test().then((value) => arr.push(value));
-console.log(arr);
+// var arr = [];
+// test().then((value) => arr.push(value));
+// console.log(arr);
 // console.log(products);
 /*
 var array = [];
@@ -103,9 +103,9 @@ function renderCards() {
         div.id = "renderedCard";
         div.innerHTML = `
     <div id="card">
-    <img src="${p.p_avatar}" alt="screenshot">
-    <h3 class="card-title">${p.username}</h3>
-    <p>${p.desc}</p>
+    <img src="${p.imgPath}" alt="screenshot">
+    <h3 class="card-title">${p.name}</h3>
+    <p>${p.description}</p>
     <p style="font-style:italic;">By ${p.author}</p>
     <button type="button" onclick="test()">Buy for: ${p.price} $</button>
     </div>`;
