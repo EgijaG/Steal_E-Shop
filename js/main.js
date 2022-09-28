@@ -1,14 +1,14 @@
 let categories = [];
 fetch("data/products.json")
-    .then((resp) => resp.json())
-    .then((prod) =>
-      prod.forEach((p) => {
-        if (!categories.includes(p.category)) {
-          categories.push(p.category);
-          console.log(p.category);
-        }
-      })
-    );
+  .then((resp) => resp.json())
+  .then((prod) =>
+    prod.forEach((p) => {
+      if (!categories.includes(p.category)) {
+        categories.push(p.category);
+        console.log(p.category);
+      }
+    })
+  );
 document.getElementById("myHeader").innerHTML = `
 <div class="header">
     <div class="header-items header-left">
@@ -35,10 +35,10 @@ document.getElementById("myFooter").innerHTML = `
 theUrl2 = "http://stealstoragehost.epizy.com/getAllRows.php";
 theUrl = "https://random-data-api.com/api/v2/users";
 
-function back(){
-  fetch(theUrl,{
-    method : 'GET',
-    mode: 'no-cors',
+function back() {
+  fetch(theUrl, {
+    method: "GET",
+    mode: "no-cors",
     headers: {
       "Content-Type": "application/json",
     },
@@ -48,7 +48,7 @@ function back(){
   console.log(json);
 }
 
-async function test(){
+async function test() {
   const resp = await fetch(theUrl2);
   const object = await resp.json();
   //console.log(object);
@@ -57,21 +57,21 @@ async function test(){
 test();
 function test1() {
   return fetch(theUrl2, {
-      method: 'GET',
-    })
-    .then(function(response) {
+    method: "GET",
+  })
+    .then(function (response) {
       return response.json();
     })
-    .then(function(data) {
+    .then(function (data) {
       var userid = JSON.parse(JSON.stringify(data));
       //console.log(userid);
       return userid;
-    })
+    });
 }
 var arr = [];
-test().then(value => arr.push(value));
+test().then((value) => arr.push(value));
 console.log(arr);
-console.log(products);
+// console.log(products);
 /*
 var array = [];
 const obj = test();
@@ -79,7 +79,7 @@ array.push(obj);
 console.log(array);
 */
 
- function renderCategories() { 
+function renderCategories() {
   categories.forEach((c) => {
     let cat = document.createElement("div");
     cat.id = "category";
