@@ -119,7 +119,7 @@ document.getElementById("myFooter").innerHTML = `
 <div class="footer">
     <a class="footer-item" href="help.php">Help</p>
     <a class="footer-item" href="contactUs.php">Contact us</p>
-    <a class="footer-item" href="login.php">About us</p>
+    <a class="footer-item" href="aboutUs.php">About us</p>
 </div>
 `;
 
@@ -131,7 +131,7 @@ theUrl2 = "http://stealstoragehost.epizy.com/getAllRows.php";
 theUrl = "https://random-data-api.com/api/v2/users"; 
 
 function back(){
-  fetch(theUrl,{
+  fetch(theUrl2,{
     method : 'GET',
     mode: 'no-cors',
     headers: {
