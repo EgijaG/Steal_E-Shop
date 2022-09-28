@@ -17,7 +17,7 @@
       <input class="input" label="E-mail" id="email" placeholder="E-mail" type="email" />
       <input class="input" label="Password" id="password" placeholder="Password" type="password" />
       <button type="button" class="btnSubmit">Log in</button>
-      <p style="font-size: medium;">Don't have an account? <a href="./signup.html">Sign up!</a></p>
+      <p style="font-size: medium;">Don't have an account? <a href="./signup.php">Sign up!</a></p>
     </div>
   </div>
   <div id="myFooter"></div>

@@ -16,7 +16,7 @@
             <p style="color:green">The payment has been processed correctly..
                 Our agents will get in touch with you!
             </p>
-            <a href="./profile.html" class="signup"> Go to My Profile</a>
+            <a href="./profile.php" class="signup"> Go to My Profile</a>
         </div>
     </div>
     <div id="myFooter"></div>
