@@ -28,7 +28,7 @@
 <?php
   include "db.php";
     if (isset($_POST['submit'])) {
-    $sql = "SELECT email, password FROM users";
+    $sql = "SELECT username, email, rating, lastseen, password FROM users";
 
     try{
       $res = $conn->prepare($sql);
@@ -40,6 +40,10 @@
     $rows = $res->fetchAll(PDO::FETCH_ASSOC);
     foreach ($rows as $row){
       if ($row["email"] == $_POST["email"] && $row["password"] == $_POST["password"]) {
+        session_start();
+        $_SESSION["username"] = $row["username"];
+        $_SESSION["rating"] = $row["rating"];
+        $_SESSION["email"] = $row["email"];
         header("Location: index.php");
       }
     }

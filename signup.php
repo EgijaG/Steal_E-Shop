@@ -44,7 +44,7 @@
         $sql = "INSERT INTO users(username, password, email, number, address, country)
         VALUES ('$user', '$password', '$email', '$phoneNr', '$address', '$country')";
         $conn->exec($sql);
-        header("Location: index.php");
+        header("Location: login.php");
     }
 ?>
 
