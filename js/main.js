@@ -79,7 +79,7 @@ array.push(obj);
 console.log(array);
 */
 
-function renderCategories() {
+async function renderCategories() {
   categories.forEach((c) => {
     let cat = document.createElement("div");
     cat.id = "category";
