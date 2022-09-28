@@ -94,7 +94,7 @@ function renderCategories() {
   renderCards();
 }
 
-function renderCards() {
+async function renderCards() {
   fetch("data/products.json")
     .then((resp) => resp.json())
     .then((prod) =>
