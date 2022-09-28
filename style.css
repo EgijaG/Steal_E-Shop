@@ -277,3 +277,24 @@ a:hover{
 .row {
   max-width: 100%;
 }
+.about-us{
+display: inline-block;
+width: 75%;
+padding: 100px;
+margin-top: 120px;
+border: 2px solid #bdf2e2;
+border-radius: 4px;
+box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+background-color: rgb(177, 240, 212);
+height: 60%;
+}
+.box-title{
+  font-weight: bolder;
+  text-align: center;
+
+}
+.container{
+  text-align: center;
+  color: #05442f;
+  margin-bottom: 15%;
+}
