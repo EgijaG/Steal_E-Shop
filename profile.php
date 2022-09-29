@@ -53,8 +53,7 @@
                     </div>
                     <div class="last-seen">
                         <form method="post">
-                        <!--<p>Last seen on ....</p>*/ -->
-                        <button type="submit" name="logout" class="btnSubmit">Logout</button>
+                        <button type="submit" name="logout" class="btnSubmit" style="min-width:30px; padding:30px;" >Logout</button>
                     </div>
                 </div>
             </div>

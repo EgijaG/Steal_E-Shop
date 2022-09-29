@@ -23,7 +23,6 @@
             <input class="input" label="Phone Number" name="phone-number" id="phone-number" placeholder="Phone Number" type="tel"
                 required />
             <input class="input" label="Country" name="country" id="country" placeholder="Country" type="text" required />
-            <input type="checkbox" name="reg-checkbox" id="reg-checkbox">Agree with terms and conditions</input>
             <button class="btnSubmit" type="submit" name="submit">Log in</button>
             <p style=" font-size: medium;">Already have an account? <a href="./login.php">Log in!</a></p>
         </div>

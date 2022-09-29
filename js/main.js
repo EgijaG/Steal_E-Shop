@@ -9,13 +9,21 @@ fetch("data/products.json")
       }
     })
   );
+
+function scroll(cat) {
+  if (categories.length > 0) {
+    const element = document.getElementsByClassName(cat)[0];
+    console.log(element);
+    element.scrollTo();
+  }
+}
 document.getElementById("myHeader").innerHTML = `
 <div class="header">
     <div class="header-items header-left">
         <a href="index.php" style="margin-bottom:5px"><img id="logo" src="./img/logo.png"></a>
         <a class="header-link nav">My Purchases</a>
         <a class="header-link nav" href="profile.php">My profile</a>
-        <a class="header-link nav">Offers</a>
+        <a class="header-link nav" href="addProduct.php">Add product</a>
 
     </div>
     <div class="header-items header-right">
@@ -32,7 +40,7 @@ document.getElementById("myFooter").innerHTML = `
 </div>
 `;
 
-theUrl2 = "http://stealstoragehost.epizy.com/getAllRows.php";
+theUrl2 = "https://stealstorage.000webhostapp.com/getAllRows.php";
 theUrl = "https://random-data-api.com/api/v2/users";
 
 function back() {
@@ -58,6 +66,7 @@ async function test() {
 function test1() {
   return fetch(theUrl2, {
     method: "GET",
+    mode: "no-cors",
   })
     .then(function (response) {
       return response.json();
@@ -68,9 +77,9 @@ function test1() {
       return userid;
     });
 }
-// var arr = [];
-// test().then((value) => arr.push(value));
-// console.log(arr);
+var arr = [];
+test().then((value) => arr.push(value));
+console.log(arr);
 // console.log(products);
 /*
 var array = [];
@@ -94,7 +103,7 @@ async function renderCategories() {
   renderCards();
 }
 
-async function renderCards() {
+function renderCards() {
   fetch("data/products.json")
     .then((resp) => resp.json())
     .then((prod) =>
@@ -107,7 +116,7 @@ async function renderCards() {
     <h3 class="card-title">${p.name}</h3>
     <p>${p.description}</p>
     <p style="font-style:italic;">By ${p.author}</p>
-    <button type="button" onclick="test()">Buy for: ${p.price} $</button>
+    <button type="button" class="btnSubmit" onclick="test1()">Buy for: ${p.price} $</button>
     </div>`;
         document.getElementsByClassName(p.category)[0].appendChild(div);
       })

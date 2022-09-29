@@ -17,22 +17,22 @@
     <div class="content">
         <div class="menu">
             <div class="menu-item col-3">
-                <button>
+                <button onclick="scroll('audio')" class="btnSubmit filter">
                     Audio
                 </button>
             </div>
             <div class="menu-item col-3">
-                <button>
+                <button onclick="scroll('video')" class="btnSubmit filter">
                     Video
                 </button>
             </div>
             <div class="menu-item col-3">
-                <button>
+                <button onclick="scroll('foto')" class="btnSubmit filter">
                     Foto
                 </button>
             </div>
             <div class="menu-item col-3">
-                <button>
+                <button class="btnSubmit filter">
                     Citi
                 </button>
             </div>
