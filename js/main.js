@@ -1,13 +1,26 @@
+// koda gabals kas nodrosina datu ieguvi DONT TOUCH PLEAS
+let a;
+const address = fetch("https://stealstorage.000webhostapp.com/getAllRows.php")
+  .then((response) => response.json())
+  .then((data) => {
+    return data;
+  });
+/* mosh noderes naktone
+ const printAddress = () => {
+  address.then((a) => {
+    console.log(a);
+  });
+};
+*/
+
 let categories = [];
-fetch("data/products.json")
-  .then((resp) => resp.json())
-  .then((prod) =>
-    prod.forEach((p) => {
-      if (!categories.includes(p.category)) {
-        categories.push(p.category);
-        console.log(p.category);
+address.then((a) => {
+      a.forEach((p) => {
+      if (!categories.includes(p.p_category)) {
+        categories.push(p.p_category);
+        console.log(p.p_category);
       }
-    })
+    })}
   );
 
 function scroll(cat) {
@@ -43,52 +56,22 @@ document.getElementById("myFooter").innerHTML = `
 theUrl2 = "https://stealstorage.000webhostapp.com/getAllRows.php";
 theUrl = "https://random-data-api.com/api/v2/users";
 
-function back() {
-  fetch(theUrl, {
-    method: "GET",
-    mode: "no-cors",
-    headers: {
-      "Content-Type": "application/json",
-    },
-  })
-    .then((res) => res.json())
-    .then((json) => JSON.parse());
-  console.log(json);
-}
-
+/*
 async function test() {
   const resp = await fetch(theUrl2);
   const object = await resp.json();
-  //console.log(object);
+  console.log(object);
   return object;
 }
-// test();
-function test1() {
-  return fetch(theUrl2, {
-    method: "GET",
-    mode: "no-cors",
-  })
-    .then(function (response) {
-      return response.json();
-    })
-    .then(function (data) {
-      var userid = JSON.parse(JSON.stringify(data));
-      //console.log(userid);
-      return userid;
-    });
-}
-var arr = [];
-test().then((value) => arr.push(value));
-console.log(arr);
-// console.log(products);
-/*
-var array = [];
-const obj = test();
-array.push(obj);
-console.log(array);
+let obj = test();
+
+console.log(obj);
+//var arr = [];
+//test().then((value) => arr.push(value));
 */
 
 async function renderCategories() {
+  address.then((a) => {
   categories.forEach((c) => {
     let cat = document.createElement("div");
     cat.id = "category";
@@ -101,25 +84,23 @@ async function renderCategories() {
     document.getElementsByClassName("fuck")[0].appendChild(cat);
   });
   renderCards();
-}
+})};
+
 
 function renderCards() {
-  fetch("data/products.json")
-    .then((resp) => resp.json())
-    .then((prod) =>
-      prod.forEach((p) => {
+  address.then((a) => {
+      a.forEach((p) => {
         let div = document.createElement("div");
         div.id = "renderedCard";
         div.innerHTML = `
     <div id="card">
-    <img src="${p.imgPath}" alt="screenshot">
-    <h3 class="card-title">${p.name}</h3>
-    <p>${p.description}</p>
-    <p style="font-style:italic;">By ${p.author}</p>
-    <button type="button" class="btnSubmit" onclick="test1()">Buy for: ${p.price} $</button>
+    <img src="${p.p_imgPath}" alt="screenshot">
+    <h3 class="card-title">${p.p_name}</h3>
+    <p>${p.p_desc}</p>
+    <p style="font-style:italic;">By ${p.p_author}</p>
+    <button type="button" class="btnSubmit" onclick="test1()">Buy for: ${p.p_price} $</button>
     </div>`;
-        document.getElementsByClassName(p.category)[0].appendChild(div);
-      })
-    );
+        document.getElementsByClassName(p.p_category)[0].appendChild(div);
+      })});
   return;
 }
