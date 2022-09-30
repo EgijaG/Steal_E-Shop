@@ -74,7 +74,7 @@ theUrl = "https://random-data-api.com/api/v2/users";
 
 async function renderCategories() {
   address.then((a) => {
-  a.forEach((c) => {
+  categories.forEach((c) => {
     let cat = document.createElement("div");
     cat.id = "category";
     cat.innerHTML = `
