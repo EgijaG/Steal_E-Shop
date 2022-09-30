@@ -15,7 +15,9 @@ php -S 127.0.0.1:8000
 ```
 
 in home folder -
-`mysql.server start`
+```
+mysql.server start
+```
 
 
 In browser open localhost..
