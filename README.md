@@ -9,8 +9,10 @@ As well as MySQL server
 
 Mac:
 in terminal -
-`cd /THE_FOLDER_OF_THIS_REPO`
-`php -S 127.0.0.1:8000`
+```
+cd /THE_FOLDER_OF_THIS_REPO
+php -S 127.0.0.1:8000
+```
 
 in home folder -
 `mysql.server start`
