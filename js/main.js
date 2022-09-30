@@ -69,9 +69,6 @@ document.getElementById("myFooter").innerHTML = `
 theUrl2 = "https://stealstorage.000webhostapp.com/getAllRows.php";
 theUrl = "https://random-data-api.com/api/v2/users";
 
-
-
-
 async function renderCategories() {
   address.then((a) => {
   categories.forEach((c) => {
@@ -105,4 +102,3 @@ function renderCards() {
       })});
   return;
 }
-1
