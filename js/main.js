@@ -12,6 +12,19 @@ const address = fetch("https://stealstorage.000webhostapp.com/getAllRows.php")
   });
 };
 */
+const printAddress = (id) => {
+  address.then((a) => {
+    a.forEach((p) => {
+      console.log(p.p_id);
+      if(p.p_id == id){
+        console.log("banana");
+      }
+    })
+
+  });
+}
+printAddress(2);
+
 
 let categories = [];
 address.then((a) => {
@@ -56,23 +69,12 @@ document.getElementById("myFooter").innerHTML = `
 theUrl2 = "https://stealstorage.000webhostapp.com/getAllRows.php";
 theUrl = "https://random-data-api.com/api/v2/users";
 
-/*
-async function test() {
-  const resp = await fetch(theUrl2);
-  const object = await resp.json();
-  console.log(object);
-  return object;
-}
-let obj = test();
 
-console.log(obj);
-//var arr = [];
-//test().then((value) => arr.push(value));
-*/
+
 
 async function renderCategories() {
   address.then((a) => {
-  categories.forEach((c) => {
+  a.forEach((c) => {
     let cat = document.createElement("div");
     cat.id = "category";
     cat.innerHTML = `
@@ -86,21 +88,21 @@ async function renderCategories() {
   renderCards();
 })};
 
-
 function renderCards() {
   address.then((a) => {
       a.forEach((p) => {
         let div = document.createElement("div");
         div.id = "renderedCard";
         div.innerHTML = `
-    <div id="card">
+    <div id="card"> 
     <img src="${p.p_imgPath}" alt="screenshot">
     <h3 class="card-title">${p.p_name}</h3>
     <p>${p.p_desc}</p>
     <p style="font-style:italic;">By ${p.p_author}</p>
-    <button type="button" class="btnSubmit" onclick="test1()">Buy for: ${p.p_price} $</button>
+    <button type="button" class="btnSubmit" onclick="location.href='http://localhost:3000/login?accountName=steal%inc.&accountNumber=isbs4444444444&amount=${p.p_price}&details=${p.p_name}&goodLink=http://localhost/Steal_E-Shop/successfulPayment.php&badLink=http://localhost/Steal_E-Shop/failedPayment.php';">Buy for: ${p.p_price} $</button>
     </div>`;
         document.getElementsByClassName(p.p_category)[0].appendChild(div);
       })});
   return;
 }
+1
