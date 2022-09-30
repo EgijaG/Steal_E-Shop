@@ -1,5 +1,5 @@
 # Steal_E-Shop
-# WARNING. FAKE.
+## WARNING. FAKE.
 This is Stealing party web shop, you can buy stolen art
 
 To start this project you need to enable:
@@ -9,11 +9,11 @@ As well as MySQL server
 
 Mac:
 in terminal -
-cd /THE_FOLDER_OF_THIS_REPO
-php -S 127.0.0.1:8000
+`cd /THE_FOLDER_OF_THIS_REPO`
+`php -S 127.0.0.1:8000`
 
 in home folder -
-mysql.server start
+`mysql.server start`
 
 
 In browser open localhost..
